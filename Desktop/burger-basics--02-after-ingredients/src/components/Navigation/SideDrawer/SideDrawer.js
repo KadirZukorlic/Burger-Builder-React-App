@@ -1,6 +1,6 @@
 import React from 'react';
 
-import Logo from '../../Logo/Logo'; //remove this and <Logo /> to solve scrolling
+// import Logo from '../../Logo/Logo'; //remove this and <Logo /> to solve scrolling
 import NavigationItems from '../NavigationItems/NavigationItems';
 import classes from './SideDrawer.css';
 import Backdrop from '../../UI/Backdrop/Backdrop';
@@ -16,9 +16,9 @@ const sideDrawer = (props) => {
     <Aux>
       <Backdrop show={props.open} clicked={props.closed}/>
       <div className={attachedClasses.join(' ')}>
-        <div className={classes.Logo}>
+        {/* <div className={classes.Logo}>
           <Logo /> 
-        </div>
+        </div> */}
         <nav>
           <NavigationItems />
         </nav>
