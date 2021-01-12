@@ -7,10 +7,11 @@ export const authStart = () => {
   };
 };
 
-export const authSuccess = (authData) => {
+export const authSuccess = (token, userId) => {
   return {
     type: actionTypes.AUTH_SUCCESS,
-    authData: authData,
+    idToken: token,
+    userId: userId,
   };
 };
 
@@ -31,16 +32,16 @@ export const auth = (email, password, isSignup) => {
     }
     let url = 'https://identitytoolkit.googleapis.com/v1/accounts:signUp?key=AIzaSyAWXTzOK9WNslSk75l0uUYcJfaafb-sxyQ';
     if (!isSignup) {
-      url = 'https://identitytoolkit.googleapis.com/v1/accounts:signInWithPassword?key=AIzaSyAWXTzOK9WNslSk75l0uUYcJfaafb-sxyQ'
+      url = 'https://identitytoolkit.googleapis.com/v1/accounts:verifyPassword?key=AIzaSyAWXTzOK9WNslSk75l0uUYcJfaafb-sxyQ';
     }
     axios.post(url, authData)
-    .then(res => {
-      console.log(res);
-      dispatch(authSuccess(res));
+    .then(response => {
+      console.log(response);
+      dispatch(authSuccess(response.data.idToken, response.data.localId));
     })
     .catch(err => {
       console.log(err);
-      dispatch(authFail(err));
+      dispatch(authFail(err.response.data.error));
     });
   };
 };
