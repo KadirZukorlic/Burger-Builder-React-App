@@ -1,11 +1,14 @@
+import React, {Fragment} from 'react';
 
+import Navbar from './components/navbar';
 
-import Header from './components/header';
 import './sass/main.scss';
 
 function App() {
   return (
-    <Header />
+    <Fragment>
+      <Navbar />
+    </Fragment>
   );
 }
 
