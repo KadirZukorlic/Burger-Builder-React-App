@@ -1,47 +1,47 @@
 
-// Nav
+// // Nav
 
-li, a, button {
-    font-family: 'Recursive'; // ?
-    font-weight: 400;
-    font-size: 1.5rem;
-    color: #fff;
-    text-decoration: none;
-}
+// li, a, button {
+//     font-family: 'Recursive'; // ?
+//     font-weight: 400;
+//     font-size: 1.5rem;
+//     color: #fff;
+//     text-decoration: none;
+// }
 
-.nav {
-    // margin: 0 25rem;
-    height: 3rem;
-    background-color: rgb(5, 8, 5);
+// .nav {
+//     // margin: 0 25rem;
+//     height: 3rem;
+//     background-color: rgb(5, 8, 5);
 
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+//     display: flex;
+//     justify-content: space-between;
+//     align-items: center;
 
-    // &__logo {
-    //     width: 1.5rem;
-    //     height: 1.5rem;
-    // }
+//     // &__logo {
+//     //     width: 1.5rem;
+//     //     height: 1.5rem;
+//     // }
 
-    &__list {
-        margin-left: 15rem;
-    }
+//     &__list {
+//         margin-left: 15rem;
+//     }
 
-    &__item {
-        display: inline-block;
-        padding: 2.5rem;
-    }
+//     &__item {
+//         display: inline-block;
+//         padding: 2.5rem;
+//     }
 
-    &__link {
-    }
+//     &__link {
+//     }
 
-    &__search {
-        transform: translateX(-4rem);
-        flex: 0 0 20%;
-    }
+//     &__search {
+//         transform: translateX(-4rem);
+//         flex: 0 0 20%;
+//     }
 
-    &__btn {
-        color: rgb(131, 129, 37);
-        margin-right: 2rem;
-    }
-}
+//     &__btn {
+//         color: rgb(131, 129, 37);
+//         margin-right: 2rem;
+//     }
+// }
