@@ -10,7 +10,7 @@ const Navbar = () => {
   const [dropdown, setDropdown] = useState(false);
 
   const clickHandler = () => setClick(!click)
-  console.log(click, 'CLICK INITAL')
+  console.log(click, 'CLICK')
   const closeMobileMenu = () => setClick(false);
   const dropdownHandler = () => setDropdown(!dropdown);
 
