@@ -47,7 +47,7 @@
 // }
 
 
-// Button Sign Up
+// BUTTON SIGN UP
 .btn__signup {
     padding: .8rem 2rem;
     border-radius: .4rem;
@@ -70,7 +70,6 @@
 }
 
 // DROPDOWN
-
 .dropdown__menu {
     width: 20rem;
     position: absolute;
@@ -100,3 +99,43 @@
         padding: 1.6rem;
     }
 }
+
+// NAVBAR
+.nav {
+    background: linear-gradient(90deg, rgb(28, 27, 27) 0%, rgb(26, 23, 23) 100%);
+    height: 8rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2rem;
+
+    &__menu {
+        display: grid;
+        grid-template-columns: repeat(6, auto);
+        grid-gap: 1rem;
+        list-style: none;
+        text-align: center;
+        width: 70vw;
+        justify-content: end;
+        margin-right: 2rem;
+    }
+
+    &__item {
+        display: flex;
+        align-items: center;
+        height: 8rem;
+    }
+
+    &__links {
+        color: #fff;
+        text-decoration: none;
+        padding: 0.5rem 1rem;
+    }
+
+    &__links:hover {
+        background-color: $color-primary;
+        border-radius: 4px;
+        transition: all .2s ease-out;
+    }
+}
+

@@ -17,17 +17,22 @@ const Navbar = () => {
   return (
     <>
     <nav className="nav">
-      <Link to="/">Vijesti</Link>
       <div className="menu-icon"  onClick={clickHandler}>
         <i className={click ? 'fas fa-times' : 'fas fa-bars'} />
       </div>
-      <ul className={click ? 'nav-menu active' : 'nav-menu'}>
+      <ul className={click ? 'nav__menu-active' : 'nav__menu'}>
        <li className="nav__item">
          <Link to="/pocetna" className="nav__links" onClick={closeMobileMenu}>
           Pocetna
          </Link>
        </li>
 
+       <li className="nav__item">
+         <Link to="/vijesti" className="nav__links" onClick={closeMobileMenu}>
+          Vijesti
+         </Link>
+       </li>
+       
        <li className="nav__item">
          <Link to="/politika" className="nav__links" onClick={closeMobileMenu}>
           Politika <i className="fas fa-caret-down"/>
@@ -49,7 +54,7 @@ const Navbar = () => {
 
        <li className="nav__item">
          <Link to="/sign-up" className="nav__links-mobile" onClick={closeMobileMenu}>
-          Registruj se
+          Sign Up
          </Link>
        </li>
       </ul>
