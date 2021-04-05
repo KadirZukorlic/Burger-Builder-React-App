@@ -12,7 +12,24 @@ const Navbar = () => {
   const clickHandler = () => setClick(!click)
   console.log(click, 'CLICK')
   const closeMobileMenu = () => setClick(false);
-  const dropdownHandler = () => setDropdown(!dropdown);
+
+  const onMouseEnter = () => {
+    window.innerWidth < 960 ? setDropdown(false) : setDropdown(true)
+    // if(window.innerWidth < 960) {
+    //   setDropdown(false)
+    // } else {
+    //   setDropdown(true);
+    // }
+  };
+
+  const onMouseLeave = () => {
+    // window.innerWidth < 960 ? setDropdown(false) : setDropdown(false)
+    if (window.innerWidth < 960) {
+      setDropdown(false);
+    } else {
+      setDropdown(false);
+    }
+  };
 
   return (
     <>
@@ -20,7 +37,7 @@ const Navbar = () => {
       <div className="menu-icon"  onClick={clickHandler}>
         <i className={click ? 'fas fa-times' : 'fas fa-bars'} />
       </div>
-      <ul className={click ? 'nav__menu-active' : 'nav__menu'}>
+      <ul className={click ? 'nav__menu active' : 'nav__menu'}>
        <li className="nav__item">
          <Link to="/pocetna" className="nav__links" onClick={closeMobileMenu}>
           Pocetna
@@ -33,7 +50,9 @@ const Navbar = () => {
          </Link>
        </li>
        
-       <li className="nav__item">
+       <li className="nav__item"
+            onMouseEnter={onMouseEnter}
+            onMouseLeave={onMouseLeave}>
          <Link to="/politika" className="nav__links" onClick={closeMobileMenu}>
           Politika <i className="fas fa-caret-down"/>
          </Link>
