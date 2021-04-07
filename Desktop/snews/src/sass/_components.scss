@@ -47,31 +47,31 @@
 
 ///////////// BUTTON SIGN UP
 .btn__signup {
-  padding: 0.8rem 2rem;
+  padding: 0.3rem .8rem;
   border-radius: 0.4rem;
   outline: none;
   border: none;
-  font-size: 1.2rem;
+  font-size: .9rem;
   cursor: pointer;
   background-color: $color-primary;
   font-weight: 400;
   color: #fff;
 
   &:hover {
-    padding: 0.6rem 1.8rem;
+    padding: .4rem .9rem;
     transition: all 0.3s ease-in-out;
     background-color: transparent;
     color: #fff;
     border-radius: .4rem;
-    border: 2px solid $color-primary;
+    border: 1px solid $color-primary;
   }
 }
 
 ///////////// DROPDOWN
 .dropdown__menu {
-  width: 20rem;
+  width: 10rem;
   position: absolute;
-  top: 8rem;
+  top: 3rem;
   list-style: none;
   text-align: start;
 
@@ -101,11 +101,11 @@
 ///////////// NAVBAR
 .nav {
   background: linear-gradient(90deg, rgb(28, 27, 27) 0%, rgb(26, 23, 23) 100%);
-  height: 8rem;
+  height: 3rem;
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 1.2rem;
+  font-size: .9rem;
 
   position: fixed;
   right: 0;
@@ -126,7 +126,7 @@
   &__item {
     display: flex;
     align-items: center;
-    height: 8rem; // height of nav
+    height: 3rem; // height of nav
   }
 
   &__links {
@@ -166,9 +166,9 @@
       display: flex;
       flex-direction: column;
       width: 100%;
-      height: 90vh;
+      height: 100vh;
       position: absolute;
-      top: 80px;
+      top: 3rem;
       left: -100%;
       opacity: 1;
       transition: all 0.5s ease;
@@ -184,7 +184,7 @@
   
     .nav__links {
       text-align: center;
-      padding: 2rem;
+      padding: 1rem;
       width: 100%;
       display: table;
     }
@@ -204,8 +204,8 @@
     .menu-icon {
       display: block;
       position: absolute;
-      top: .5rem;
-      right: 1rem;
+      top: -1.7rem;
+      right: .5rem;
       transform: translate(-100%, 60%);
       font-size: 2.5rem;
       cursor: pointer;
@@ -219,14 +219,14 @@
     .nav__links-mobile {
       display: block;
       text-align: center;
-      padding: 1.5rem;
+      padding: .8rem;
       margin: 2rem auto;
       border-radius: 4px;
-      width: 80%;
+      width: 50%;
       background: $color-primary;
       text-decoration: none;
       color: #fff;
-      font-size: 1.5rem;
+      font-size: 1rem;
     }
   
     .nav__links-mobile:hover {
@@ -247,3 +247,7 @@
     align-items: center;
     justify-content: center;
   }
+
+  /////////////// HEADER
+
+  .header {}

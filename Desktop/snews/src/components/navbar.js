@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom'
-import {Button} from './Button';
+import {ButtonSignUp} from './ButtonSignUp';
 import Dropdown from './Dropdown';
 
 // import logo from '../assets/images/logo.png';
@@ -78,7 +78,7 @@ const Navbar = () => {
          </Link>
        </li>
       </ul>
-      <Button />
+      <ButtonSignUp />
     </nav>
     </>
   );
