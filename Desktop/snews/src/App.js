@@ -1,5 +1,6 @@
 import React from 'react';
-import { BrowserRouter } from 'react-router-dom';
+import { BrowserRouter, Switch, Route } from 'react-router-dom';
+import Vijesti from './components/pages/Vijesti';
 
 import Navbar from './components/Navbar';
 
@@ -9,6 +10,9 @@ function App() {
   return (
     <BrowserRouter>
       <Navbar />
+      <Switch>
+        <Route exact path="/vijesti" component={Vijesti} />
+      </Switch>
     </BrowserRouter>
   );
 }

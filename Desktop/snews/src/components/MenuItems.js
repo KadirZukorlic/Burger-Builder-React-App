@@ -1,25 +1,25 @@
 export const MenuItems = [
   {
-    title: 'Regija',
-    path: '/regija',
+    title: 'Opcija 1',
+    path: '/opcija-1',
     className: 'dropdown-link',
   },
 
   {
-    title: 'Regija',
-    path: '/regija',
+    title: 'Opcija 2',
+    path: '/opcija-2',
     className: 'dropdown-link',
   },
 
   {
-    title: 'Regija',
-    path: '/regija',
+    title: 'Opcija 3',
+    path: '/opcija-3',
     className: 'dropdown-link',
   },
 
   {
-    title: 'Regija',
-    path: '/regija',
+    title: 'Opcija 4',
+    path: '/opcija-4',
     className: 'dropdown-link',
   },
 ];

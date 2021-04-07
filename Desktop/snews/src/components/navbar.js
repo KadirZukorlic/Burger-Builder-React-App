@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import {Link, Router} from 'react-router-dom'
+import { Link } from 'react-router-dom'
 import {Button} from './Button';
 import Dropdown from './Dropdown';
 
@@ -50,20 +50,21 @@ const Navbar = () => {
          </Link>
        </li>
        
+       <li className="nav__item">
+         <Link to="/komparacija" className="nav__links" onClick={closeMobileMenu}>
+          Politika
+         </Link>
+       </li>
+       
        <li className="nav__item"
             onMouseEnter={onMouseEnter}
             onMouseLeave={onMouseLeave}>
          <Link to="/politika" className="nav__links" onClick={closeMobileMenu}>
-          Politika <i className="fas fa-caret-down"/>
+          Komparacija <i className="fas fa-caret-down"/>
          </Link>
          {dropdown && <Dropdown />}
        </li>
 
-       <li className="nav__item">
-         <Link to="/komparacija" className="nav__links" onClick={closeMobileMenu}>
-          Komparacija
-         </Link>
-       </li>
 
        <li className="nav__item">
          <Link to="/contact-us" className="nav__links" onClick={closeMobileMenu}>

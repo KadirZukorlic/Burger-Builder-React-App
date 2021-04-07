@@ -107,6 +107,11 @@
   align-items: center;
   font-size: 1.2rem;
 
+  position: fixed;
+  right: 0;
+  left: 0;
+  top: 0;
+
   &__menu {
     display: grid;
     grid-template-columns: repeat(6, auto);
@@ -150,6 +155,9 @@
 }
 
 @media screen and (max-width: 700px) {
+  .fa-caret-down {
+    display: none;
+  }
   .NavbarItems {
     position: relative;
   }
@@ -182,7 +190,7 @@
     }
   
     .nav__links:hover {
-      background-color: #1888ff;
+      background-color: $color-primary;
       border-radius: 0;
     }
   
@@ -196,7 +204,7 @@
     .menu-icon {
       display: block;
       position: absolute;
-      top: .9rem;
+      top: .5rem;
       right: 1rem;
       transform: translate(-100%, 60%);
       font-size: 2.5rem;
@@ -215,7 +223,7 @@
       margin: 2rem auto;
       border-radius: 4px;
       width: 80%;
-      background: #1888ff;
+      background: $color-primary;
       text-decoration: none;
       color: #fff;
       font-size: 1.5rem;
@@ -223,11 +231,19 @@
   
     .nav__links-mobile:hover {
       background: #fff;
-      color: #1888ff;
+      color: $color-primary;
       transition: 250ms;
     }
   
     button {
       display: none;
     }
+  }
+
+  ////////// TEST
+  .vijesti {
+    display: flex;
+    height: 90vh;
+    align-items: center;
+    justify-content: center;
   }
