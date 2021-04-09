@@ -55,21 +55,20 @@ const Navbar = () => {
           Politika
          </Link>
        </li>
-       
-       <li className="nav__item"
-            onMouseEnter={onMouseEnter}
-            onMouseLeave={onMouseLeave}>
-         <Link to="/politika" className="nav__links" onClick={closeMobileMenu}>
-          Komparacija <i className="fas fa-caret-down"/>
-         </Link>
-         {dropdown && <Dropdown />}
-       </li>
-
 
        <li className="nav__item">
          <Link to="/contact-us" className="nav__links" onClick={closeMobileMenu}>
           Kontaktiraj nas
          </Link>
+       </li>
+
+       <li className="nav__item"
+            onMouseEnter={onMouseEnter}
+            onMouseLeave={onMouseLeave}>
+         <Link to="/vise" className="nav__links" onClick={closeMobileMenu}>
+          Vise <i className="fas fa-caret-down"/>
+         </Link>
+         {dropdown && <Dropdown />}
        </li>
 
        <li className="nav__item">

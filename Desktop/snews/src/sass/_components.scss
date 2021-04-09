@@ -56,7 +56,6 @@
   background-color: $color-primary;
   font-weight: 400;
   color: #fff;
-
   &:hover {
     padding: .4rem .9rem;
     transition: all 0.3s ease-in-out;
@@ -118,8 +117,8 @@
     grid-gap: 1rem;
     list-style: none;
     text-align: center;
-    width: 70vw;
-    justify-content: end;
+    width: 50vw;
+    justify-content: start;
   }
 
   &__item {
@@ -250,34 +249,20 @@
   /////////////// HEADER
 
   .header {
-    height: 12rem;
-    background-color: #eee;
-    box-shadow: rgba(0, 0, 0, 1);
+    height: 10rem;
     display: flex;
-    justify-content: flex-start;
-    align-items: flex-end;
+    justify-content: center;
+    align-items:center;
+    box-shadow: 0px 5px 5px rgba(68, 68, 68, 0.6);
 
     &__logo {
       height: 7rem;
       width: 6rem;
-      margin-left: 15rem;
-      align-self: center;
+      margin-right: 5rem;
     }
 
-    &__item {
-      list-style: none;
-      margin-bottom: .3rem;
-      display: inline-block;
-      padding-right: 2.5rem;
-      text-transform: uppercase;
+    &__h1 {
+      font-family: 'Dancing Script';
       font-weight: 700;
-      font-size: .9rem;
-      transform: translateX(-5rem);
-    }
-
-    &__links {
-      text-decoration: none;
-      color: black;
-      font-family: inherit;
     }
   }
