@@ -10,18 +10,20 @@ const Main = () => {
     <div className="main">
         <figure class="main__item main__item--1">
           <img src={main1} alt="Vijest-1" className="main__img" />
+          <h3>TEST</h3>
+          <p>13.april 2021</p>
         </figure>
 
         <figure class="main__item main__item--2">
-        <img src={main2} alt="Vijest-1" className="main__img" />
+        <img src={main2} alt="Vijest-2" className="main__img" />
         </figure>
 
         <figure class="main__item main__item--3">
-          <img src={main3} alt="Vijest-1" className="main__img" />
+          <img src={main3} alt="Vijest-3" className="main__img" />
         </figure>
 
         <figure class="main__item main__item--4">
-          <img src={main4} alt="Vijest-1" className="main__img" />
+          <img src={main4} alt="Vijest-4" className="main__img" />
         </figure>
       </div>
   );
