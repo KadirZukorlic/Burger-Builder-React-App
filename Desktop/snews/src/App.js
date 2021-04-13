@@ -4,6 +4,7 @@ import Vijesti from './components/pages/Vijesti';
 
 import Navbar from './components/Navbar';
 import Header from './components/Header';
+import Main from './components/Main';
 
 import './sass/main.scss';
 
@@ -12,6 +13,7 @@ function App() {
     <BrowserRouter>
       <Navbar />
       <Header />
+      <Main />
       <Switch>
         <Route exact path="/vijesti" component={Vijesti} />
       </Switch>
