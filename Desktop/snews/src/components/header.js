@@ -1,4 +1,6 @@
 import React from 'react';
+import { Container } from 'react-bootstrap';
+
 
 import Logo from '../assets/images/logo.png';
 

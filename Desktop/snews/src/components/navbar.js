@@ -1,91 +1,38 @@
-import React, { useState } from 'react';
-import { Link } from 'react-router-dom'
-import {ButtonSignUp} from './ButtonSignUp';
-import Dropdown from './Dropdown';
+import React from 'react';
 
-import { Container } from 'react-bootstrap';
+import {Navbar,  Nav, NavDropdown,} from 'react-bootstrap';
 
-
-// import logo from '../assets/images/logo.png';
-
-const Navbar = () => {
-  const [click, setClick] = useState(false);
-  const [dropdown, setDropdown] = useState(false);
-
-  const clickHandler = () => setClick(!click)
-  console.log(click, 'CLICK')
-  const closeMobileMenu = () => setClick(false);
-
-  const onMouseEnter = () => {
-    window.innerWidth < 960 ? setDropdown(false) : setDropdown(true)
-    // if(window.innerWidth < 960) {
-    //   setDropdown(false)
-    // } else {
-    //   setDropdown(true);
-    // }
-  };
-
-  const onMouseLeave = () => {
-    // window.innerWidth < 960 ? setDropdown(false) : setDropdown(false)
-    if (window.innerWidth < 960) {
-      setDropdown(false);
-    } else {
-      setDropdown(false);
-    }
-  };
+const Navigation = () => {
 
   return (
-    <>
-    <Container >
-    <nav className="nav">
-      <div className="menu-icon"  onClick={clickHandler}>
-        <i className={click ? 'fas fa-times' : 'fas fa-bars'} />
-      </div>
-      <ul className={click ? 'nav__menu active' : 'nav__menu'}>
-       <li className="nav__item">
-         <Link to="/pocetna" className="nav__links" onClick={closeMobileMenu}>
-          Pocetna
-         </Link>
-       </li>
-
-       <li className="nav__item">
-         <Link to="/vijesti" className="nav__links" onClick={closeMobileMenu}>
-          Vijesti
-         </Link>
-       </li>
-       
-       <li className="nav__item">
-         <Link to="/komparacija" className="nav__links" onClick={closeMobileMenu}>
-          Politika
-         </Link>
-       </li>
-
-       <li className="nav__item">
-         <Link to="/contact-us" className="nav__links" onClick={closeMobileMenu}>
-          Kontaktiraj nas
-         </Link>
-       </li>
-
-       <li className="nav__item"
-            onMouseEnter={onMouseEnter}
-            onMouseLeave={onMouseLeave}>
-         <Link to="/vise" className="nav__links" onClick={closeMobileMenu}>
-          Vise <i className="fas fa-caret-down"/>
-         </Link>
-         {dropdown && <Dropdown />}
-       </li>
-
-       <li className="nav__item">
-         <Link to="/sign-up" className="nav__links-mobile" onClick={closeMobileMenu}>
-          Sign Up
-         </Link>
-       </li>
-      </ul>
-      <ButtonSignUp />
-    </nav>
-    </Container>
-    </>
+    <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
+      <Navbar.Brand href="#home">React-Bootstrap</Navbar.Brand>
+      <Navbar.Toggle aria-controls="responsive-navbar-nav" />
+      <Navbar.Collapse id="responsive-navbar-nav">
+        <Nav className="mr-auto">
+          <Nav.Link href="#features">Features</Nav.Link>
+          <Nav.Link href="#pricing">Pricing</Nav.Link>
+          <NavDropdown title="Dropdown" id="collasible-nav-dropdown">
+            <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
+            <NavDropdown.Item href="#action/3.2">
+              Another action
+            </NavDropdown.Item>
+            <NavDropdown.Item href="#action/3.3">Something</NavDropdown.Item>
+            <NavDropdown.Divider />
+            <NavDropdown.Item href="#action/3.4">
+              Separated link
+            </NavDropdown.Item>
+          </NavDropdown>
+        </Nav>
+        <Nav>
+          <Nav.Link href="#deets">More deets</Nav.Link>
+          <Nav.Link eventKey={2} href="#memes">
+            Dank memes
+          </Nav.Link>
+        </Nav>
+      </Navbar.Collapse>
+    </Navbar>
   );
 };
 
-export default Navbar;
+export default Navigation;
