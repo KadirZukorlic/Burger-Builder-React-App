@@ -3,6 +3,9 @@ import { Link } from 'react-router-dom'
 import {ButtonSignUp} from './ButtonSignUp';
 import Dropdown from './Dropdown';
 
+import { Container } from 'react-bootstrap';
+
+
 // import logo from '../assets/images/logo.png';
 
 const Navbar = () => {
@@ -33,6 +36,7 @@ const Navbar = () => {
 
   return (
     <>
+    <Container >
     <nav className="nav">
       <div className="menu-icon"  onClick={clickHandler}>
         <i className={click ? 'fas fa-times' : 'fas fa-bars'} />
@@ -79,6 +83,7 @@ const Navbar = () => {
       </ul>
       <ButtonSignUp />
     </nav>
+    </Container>
     </>
   );
 };
