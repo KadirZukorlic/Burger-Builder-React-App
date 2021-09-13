@@ -54,7 +54,7 @@ const auth = (props) => {
     const updatedControls = updateObject(authForm, {
       [controlName]: updateObject(authForm[controlName], {
         value: event.target.value,
-        valid: checkValidity(event.target.value, this.state.isValid),
+        valid: checkValidity(event.target.value, this.isValid),
         touched: true,
       }),
     });
