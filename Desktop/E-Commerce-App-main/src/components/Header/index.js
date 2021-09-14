@@ -9,6 +9,7 @@ const Header = (props) => {
       <div className="wrap">
         <div className="logo">
           <img src={Logo} alt="firm logo" />
+          <img src={Logo} alt="firm logo" />
         </div>
       </div>
     </header>
